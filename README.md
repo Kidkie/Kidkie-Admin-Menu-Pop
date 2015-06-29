@@ -42,7 +42,7 @@ Can be found in /assets/
 * Screen 1. The plugin is hidden unless you are logged in
 * Screen 2. The button for showing and hiding the Admin Bar is positioned in the upper left corner
 * Screen 3. While active you can show and hide the Admin Bar, the current state is stored with a jQuery Cookie Plugin
-* Screnn 4. On ’hover’ the button is lit up, on top of toggling the visibility you have the choice to click your way into the dashboard.
+* Screen 4. On ’hover’ the button is lit up, on top of toggling the visibility you have the choice to click your way into the dashboard.
 
 ### Changelog
 
