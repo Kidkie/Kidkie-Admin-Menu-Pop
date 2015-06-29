@@ -2,14 +2,14 @@
 
 Kidkie Admin Menu Pop is built with Wordpress-developers and designers in mind that need to see the design without the admin bar hovering on top of content.
 
-=== Kidkie Admin Menu Pop ===
+## Kidkie Admin Menu Pop
 Contributors: Kidkie
 Tags: show hide administrator bar design logged in
-Requires at least: 4.2.2
+Created with Wordpress 4.2.2
 Tested up to: 4.2.2
 Stable tag: 4.2.2
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: Released under the MIT license
+License URI: http://opensource.org/licenses/MIT
 
 Plugin built for developers for handling visibility (show and hide) of Admin Bar and Edit-link when logged in.
 
