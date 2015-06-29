@@ -42,6 +42,6 @@ Can be found in /addets/
 
 ### Changelog
 
-= 1.0 =
+#### 1.0
 * Uploaded to Wordpress.com Plugin Directory
 * JS and CSS moved into /assets/ directory
