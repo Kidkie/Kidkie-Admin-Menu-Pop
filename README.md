@@ -2,7 +2,7 @@
 
 Kidkie Admin Menu Pop is built with Wordpress-developers and designers in mind that need to see the design without the admin bar hovering on top of content.
 
-## Kidkie Admin Menu Pop
+## Kidkie Admin Menu Pop (ampop)
 * Contributors: Kidkie
 * Tags: show hide administrator bar design logged in
 * Created with Wordpress 4.2.2
@@ -15,10 +15,12 @@ Plugin built for developers for handling visibility (show and hide) of Admin Bar
 
 ## Description
 
-Kidkie Admin Menu Pop is built with developers and designers in mind that need to see the design without the admin bar hovering on top of content.
+Am Pop is built with developers and designers in mind that need to see the design without the admin bar hovering on top of content.
 
-Kidkie Admin Menu Pop uses jQuery show() and hide() to show and hide the admin bar.
-Kidkie Admin Menu Pop uses jQuery Cookie Plugin v1.4.1 by Klaus Hartl (https://github.com/carhartl/jquery-cookie) to remember current state.
+Am Pop uses jQuery slideToggle() to show and hide the admin bar.
+Am Pop includes jQuery Cookie Plugin v1.4.1 by Klaus Hartl (https://github.com/carhartl/jquery-cookie) to remember current state.
+Built with CSS3.
+Am Pop requires jQuery to work (not included).
 
 ## Installation
 
@@ -31,9 +33,15 @@ Kidkie Admin Menu Pop uses jQuery Cookie Plugin v1.4.1 by Klaus Hartl (https://g
 * While active the plugin adds a low transparency box in the upper left corner of browser
 * While inactive you also have a option to enter your dashboard by clicking an ’Edit’ link. Version 1 send you to ’domain.com/wp-admin’.
 
+### Code comments
+
+When activated Ampop looks thru the body for class-name '.edit-link' and hides all elements. To change this, edit line 22 and 26 in JS to match your setup.
+
+'#wpadminbar'
+
 ### Screenshots
 
-Can be found in /addets/
+Can be found in /assets/
 
 1. The plugin is hidden unless you are logged in
 2. The button for showing and hiding the Admin Bar is positioned in the upper left corner
