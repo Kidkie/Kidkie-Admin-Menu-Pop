@@ -27,11 +27,11 @@ Am Pop requires jQuery to work (not included).
 1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
-*. The plugin works when activated
+* The plugin works when activated
 
-* While inactive the plugin adds a box in the upper left corner of browser
-* While active the plugin adds a low transparency box in the upper left corner of browser
-* While inactive you also have a option to enter your dashboard by clicking an ’Edit’ link. Version 1 send you to ’domain.com/wp-admin’.
+* Am Pop v1 adds a box in the upper left corner of browser for site admins to toggle visibility of the Wordpress admin bar.
+* When toggled the plugin adds a low transparency box in the upper left corner of browser
+* While toggled users have a option to enter the dashboard by clicking an ’Edit’ link. Version 1 takes users to ’domain.com/wp-admin’.
 
 ### Code comments
 
