@@ -31,13 +31,13 @@ Am Pop requires jQuery to work (not included).
 
 * Am Pop v1 adds a box in the upper left corner of browser for site admins to toggle visibility of the Wordpress admin bar.
 * When toggled the plugin adds a low transparency box in the upper left corner of browser
-* While toggled users have a option to enter the dashboard by clicking an ’Edit’ link. Version 1 takes users to ’domain.com/wp-admin’.
+* While toggled users have a option to enter the dashboard by clicking an ’Edit’ link. Version 1 takes users to `domain.com/wp-admin`.
 
 ### Code comments
 
-When activated Ampop looks thru the body for class-name '.edit-link' and hides all elements. To change this, edit line 22 and 26 in 'jquery.ampop.js' to match your setup.
+When activated Ampop looks thru the body for class-name `.edit-link` and hides all elements. To change this, edit line 22 and 26 in `jquery.ampop.js` to match your setup.
 
-The plugin uses element '#wpadminbar' to toggle Wordpress Admin Bar. This can be editier to suit your setup on lines 18, 32 and 48 in 'jquery.ampop.js'.
+The plugin uses element `#wpadminbar` to toggle Wordpress Admin Bar. This can be editier to suit your setup on lines 18, 32 and 48 in `jquery.ampop.js`.
 
 ### Screenshots
 
