@@ -37,7 +37,7 @@ Am Pop requires jQuery to work (not included).
 
 When activated Ampop looks thru the body for class-name `.edit-link` and hides all elements. To change this, edit line 22 and 26 in `jquery.ampop.js` to match your setup.
 
-The plugin uses element `#wpadminbar` to toggle Wordpress Admin Bar. This can be editier to suit your setup on lines 18, 32 and 48 in `jquery.ampop.js`.
+The plugin uses element `#wpadminbar` to toggle Wordpress Admin Bar. This can be editied to suit your setup on lines 18, 32 and 48 in `jquery.ampop.js`.
 
 ### Screenshots
 
