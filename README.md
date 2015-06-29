@@ -4,7 +4,6 @@ Kidkie Admin Menu Pop is built with Wordpress-developers and designers in mind t
 
 === Kidkie Admin Menu Pop ===
 Contributors: Kidkie
-Donate link: http://example.com/
 Tags: show hide administrator bar design logged in
 Requires at least: 4.2.2
 Tested up to: 4.2.2
