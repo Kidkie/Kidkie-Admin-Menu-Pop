@@ -1,12 +1,12 @@
-/*
- * Pluck Wordpress Plugin
- * Author: Martin Ekelund, Kidkie
- * Author homepage: martinekelund.com
- *
- * This plugin is built with jQuery UI and some Wordpress functionality.
- *
+/*!
+* Plugin Name: Kidkie Admin Menu Pop
+* Plugin URI: https://github.com/Kidkie/Kidkie-Admin-Menu-Pop
+* Description: Plugin built for developers for handling visibility of Admin Bar and Edit-link when logged in.
+* Version: 1.1
+* Author: Martin Ekelund
+* Author URI: https://github.com/Kidkie/
+* License: Released under the MIT license
 */
-
 /* General */
 #wpadminbar-am-pop {
 	direction: ltr;

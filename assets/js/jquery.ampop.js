@@ -1,35 +1,37 @@
 /*!
- * Kidkie Admin Menu Pop
- *
- * http://www.martinekelund.com
- * Author 2015 Martin Ekelund
- *
- * Description: Plugin built for developers for handling visibility of Admin Bar and Edit-link when logged in.
- * Version: 1.0
- *
- * Released under the MIT license
- */
-
+* Plugin Name: Kidkie Admin Menu Pop
+* Plugin URI: https://github.com/Kidkie/Kidkie-Admin-Menu-Pop
+* Description: Plugin built for developers for handling visibility of Admin Bar and Edit-link when logged in.
+* Version: 1.1
+* Author: Martin Ekelund
+* Author URI: https://github.com/Kidkie/
+* License: Released under the MIT license
+*/
 jQuery(function($){
+	// Settings
+	// Wordpress Admin bar ID
+	var adminBarID = "#wpadminbar";
+	// Edit-button Class
+	var editButtonClass = ".edit-link";
 	$('body').addClass( "kidkie-ampop" );
     if( $.cookie( "ampop" ) == '' ){
         $.cookie( "ampop", "1");
     }
-    $("#wpadminbar").wrap( "<div id='wpadminbar-am-pop'></div>" );
+    $(adminBarID).wrap( "<div id='wpadminbar-am-pop'></div>" );
     $("#wpadminbar-am-pop").append( "<div class='wpadminbar_ampop_tools'><div class='wpadminbar_ampop_trigger'></div><div class='wpadminbar_ampop_admin'><a href='/wp-admin/' title='Go to admin'>Edit</a></div></div>" );
     $.fn.editVisibility = function(state) {
         if(state == 1) {
-            $( ".edit-link" ).each(function() {
+            $(editButtonClass).each(function() {
                 $( this ).hide();
             });
         } else {
-            $( ".edit-link" ).each(function() {
+            $(editButtonClass).each(function() {
                 $( this ).show();
             });
         }
     };
     if( $.cookie( "ampop" ) == 1 ){
-    	$( "#wpadminbar" ).slideToggle('fast', function(){});
+    	$(adminBarID).slideToggle('fast', function(){});
        	$( "#wpadminbar-am-pop" ).addClass( "ampop-active" );
         $.fn.editVisibility(1);
         $('body').addClass( "kidkie-ampop-active" );
@@ -45,7 +47,7 @@ jQuery(function($){
         $.fn.editVisibility(2);
     }; 
     $( ".wpadminbar_ampop_trigger" ).click(function() {
-		$( "#wpadminbar" ).slideToggle('fast', function(){
+		$(adminBarID).slideToggle('fast', function(){
 			var $link = $( ".wpadminbar_ampop_trigger" );
 			$(this).is( ":visible" ) ? $.fn.amHidden('Hide') : $.fn.amVisible('Show');
 		});
