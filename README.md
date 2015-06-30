@@ -1,6 +1,6 @@
-# Kidkie-Admin-Menu-Pop
+# Kidkie-Admin-Menu-Pop v1.1
 
-Kidkie Admin Menu Pop is built with Wordpress-developers and designers in mind that need to see the design without the admin bar hovering on top of content.
+Kidkie Admin Menu Pop is a Plugin for Wordpress. Built for developers and designers with need to preview design without the Wordpress admin bar hovering on top of the site.
 
 ## Kidkie Admin Menu Pop (ampop)
 * Contributors: Kidkie
@@ -15,25 +15,33 @@ Kidkie Admin Menu Pop is built with Wordpress-developers and designers in mind t
 
 Am Pop is built with developers and designers in mind that need to see the design without the admin bar hovering on top of content. Plugin adds a button to handle visibility (show and hide) of Admin Bar and Edit-link when logged in. Am Pop requires jQuery to be installed (not included in Plugin).
 
-*How does it work?* The plugin uses jQuery slideToggle() to show and hide the admin bar. It also containes jQuery Cookie Plugin v1.4.1 by Klaus Hartl (https://github.com/carhartl/jquery-cookie) to remember current state while browsing thru the website. The almost non existing design is built with CSS3.
+*How does it work?* The plugin uses jQuery slideToggle() to show and hide the admin bar. It also containes jQuery Cookie Plugin v1.4.1 by Klaus Hartl (https://github.com/carhartl/jquery-cookie) to remember current state while browsing thru the website. The low foot print design is built with CSS3.
 
 #### Main functionality
-* Am Pop v1 adds a box in the upper left corner of browser for site admins to toggle visibility of the Wordpress admin bar.
+* Am Pop adds a box in the upper left corner of browser for site admins to toggle visibility of the Wordpress admin bar.
 * When toggled the plugin toggles to a low transparency box which fades in and out on hover
 * While toggled users have a option to enter the dashboard by clicking an ’Edit’ link. Click takes user to `domain.com/wp-admin`.
 
 ## Installation
 
 1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
-1. Activate `Kidkie Admin Menu Pop` through the 'Plugins' menu in WordPress
+1. Activate `Kidkie Admin Menu Pop` through the 'Plugins' menu in WordPress *
 
 * The plugin works when activated
 
 ### Code comments
 
-When activated Ampop looks thru the body for class-name `.edit-link` and hides all elements. To change this, edit line `22` and `26` in `jquery.ampop.js` to match your setup.
+The plugin uses element `#wpadminbar` (Wordpress 4.2.2) to toggle Wordpress Admin Bar. This can be edited to suit your needs on line `13` in `jquery.ampop.js`.
 
-The plugin uses element `#wpadminbar` to toggle Wordpress Admin Bar. This can be edited to suit your needs on lines `18`, `32` and `48` in `jquery.ampop.js`.
+```javascript
+var adminBarID = "#wpadminbar";
+```
+
+When activated Ampop looks thru the body for class-name `.edit-link` and hides all elements. To change this, edit line `15` in `jquery.ampop.js` to match your setup.
+
+```javascript
+var editButtonClass = ".edit-link";
+```
 
 ### Screenshots
 
@@ -46,6 +54,14 @@ Can be found in /assets/
 
 ### Changelog
 
+### 1.1
+* Added easier access to Wordpress elements (settings) to `jquery.ampop.js`.
+* Moved all files to `/assets/` folder
+
 #### 1.0
 * Uploaded to Wordpress.com Plugin Directory
 * JS and CSS moved into /assets/ directory
+
+## Authors
+
+[Martin Ekelund](https://github.com/Kidkie/)
