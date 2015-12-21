@@ -2,12 +2,16 @@
 * Plugin Name: Kidkie Admin Menu Pop
 * Plugin URI: https://github.com/Kidkie/Kidkie-Admin-Menu-Pop
 * Description: Plugin built for developers for handling visibility of Admin Bar and Edit-link when logged in.
-* Version: 1.1
+* Version: 1.2
 * Author: Martin Ekelund
 * Author URI: https://github.com/Kidkie/
 * License: Released under the MIT license
 */
 /* General */
+
+html {
+	margin-top: 0;
+}
 #wpadminbar-am-pop {
 	direction: ltr;
 	color: #CCC;
@@ -71,6 +75,9 @@
 #wpadminbar-am-pop .wpadminbar_ampop_tools:hover {
 	background: #222 !important;
 	padding-top: 10px;
+}
+#wpadminbar-am-pop.ampop-active {
+	height: 0 !important;
 }
 #wpadminbar-am-pop.ampop-active .wpadminbar_ampop_tools {
 	background: rgba(0,0,0,0.05);

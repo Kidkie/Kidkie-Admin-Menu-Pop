@@ -2,65 +2,11 @@
 * Plugin Name: Kidkie Admin Menu Pop
 * Plugin URI: https://github.com/Kidkie/Kidkie-Admin-Menu-Pop
 * Description: Plugin built for developers for handling visibility of Admin Bar and Edit-link when logged in.
-* Version: 1.1
+* Version: 1.2
 * Author: Martin Ekelund
 * Author URI: https://github.com/Kidkie/
 * License: Released under the MIT license
 */
-jQuery(function($){
-	// Settings
-	// Wordpress Admin bar ID
-	var adminBarID = "#wpadminbar";
-	// Edit-button Class
-	var editButtonClass = ".edit-link";
-	$('body').addClass( "kidkie-ampop" );
-    if( $.cookie( "ampop" ) == '' ){
-        $.cookie( "ampop", "1");
-    }
-    $(adminBarID).wrap( "<div id='wpadminbar-am-pop'></div>" );
-    $("#wpadminbar-am-pop").append( "<div class='wpadminbar_ampop_tools'><div class='wpadminbar_ampop_trigger'></div><div class='wpadminbar_ampop_admin'><a href='/wp-admin/' title='Go to admin'>Edit</a></div></div>" );
-    $.fn.editVisibility = function(state) {
-        if(state == 1) {
-            $(editButtonClass).each(function() {
-                $( this ).hide();
-            });
-        } else {
-            $(editButtonClass).each(function() {
-                $( this ).show();
-            });
-        }
-    };
-    if( $.cookie( "ampop" ) == 1 ){
-    	$(adminBarID).slideToggle('fast', function(){});
-       	$( "#wpadminbar-am-pop" ).addClass( "ampop-active" );
-        $.fn.editVisibility(1);
-        $('body').addClass( "kidkie-ampop-active" );
-    } else {
-        $.fn.editVisibility(2);
-    }
-    $.fn.amVisible = function(text) {
-		$.cookie("ampop", "1");
-        $.fn.editVisibility(1);
-    };
-    $.fn.amHidden = function(text) {
-		$.cookie("ampop", "2");
-        $.fn.editVisibility(2);
-    }; 
-    $( ".wpadminbar_ampop_trigger" ).click(function() {
-		$(adminBarID).slideToggle('fast', function(){
-			var $link = $( ".wpadminbar_ampop_trigger" );
-			$(this).is( ":visible" ) ? $.fn.amHidden('Hide') : $.fn.amVisible('Show');
-		});
-		var obj = "#wpadminbar-am-pop";
-		$( ".ampop-inactive" ).not($(obj)).removeClass( "ampop-active" );
-		$(obj).toggleClass( "ampop-active" );
-		
-		$( ".kidkie-ampop-active" ).not($('body')).removeClass( "kidkie-ampop-active" );
-		$('body').toggleClass( "kidkie-ampop-active" );
-		
-		event.stopPropagation();
-    });
-});
 
 /*!
  * jQuery Cookie Plugin v1.4.1
@@ -179,3 +125,57 @@ jQuery(function($){
 	};
 
 }));
+jQuery(function($){
+	// Settings
+	// Wordpress Admin bar ID
+	var adminBarID = "#wpadminbar";
+	// Edit-button Class
+	var editButtonClass = ".edit-link";
+	$('body').addClass( "kidkie-ampop" );
+    if( $.cookie( "ampop" ) == '' ){
+        $.cookie( "ampop", "1");
+    }
+    $(adminBarID).wrap( "<div id='wpadminbar-am-pop'></div>" );
+    $("#wpadminbar-am-pop").append( "<div class='wpadminbar_ampop_tools'><div class='wpadminbar_ampop_trigger'></div></div>" );
+    $.fn.editVisibility = function(state) {
+        if(state == 1) {
+            $(editButtonClass).each(function() {
+                $( this ).hide();
+            });
+        } else {
+            $(editButtonClass).each(function() {
+                $( this ).show();
+            });
+        }
+    };
+    if( $.cookie( "ampop" ) == 1 ){
+    	$(adminBarID).slideToggle('fast', function(){});
+       	$( "#wpadminbar-am-pop" ).addClass( "ampop-active" );
+        $.fn.editVisibility(1);
+        $('body').addClass( "kidkie-ampop-active" );
+    } else {
+        $.fn.editVisibility(2);
+    }
+    $.fn.amVisible = function(text) {
+		$.cookie("ampop", "1");
+        $.fn.editVisibility(1);
+    };
+    $.fn.amHidden = function(text) {
+		$.cookie("ampop", "2");
+        $.fn.editVisibility(2);
+    }; 
+    $( ".wpadminbar_ampop_trigger" ).click(function() {
+		$(adminBarID).slideToggle('fast', function(){
+			var $link = $( ".wpadminbar_ampop_trigger" );
+			$(this).is( ":visible" ) ? $.fn.amHidden('Hide') : $.fn.amVisible('Show');
+		});
+		var obj = "#wpadminbar-am-pop";
+		$( ".ampop-inactive" ).not($(obj)).removeClass( "ampop-active" );
+		$(obj).toggleClass( "ampop-active" );
+		
+		$( ".kidkie-ampop-active" ).not($('body')).removeClass( "kidkie-ampop-active" );
+		$('body').toggleClass( "kidkie-ampop-active" );
+		
+		event.stopPropagation();
+    });
+});
