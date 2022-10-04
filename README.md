@@ -2,10 +2,10 @@
 
 Built for developers and designers with need to preview design without the Wordpress admin bar hovering on top of the site.
 
-Kidkie Admin Menu Pop (ampop)
+### Kidkie Admin Menu Pop (ampop)
 
 Contributors: Kidkie
-Donate link: 
+Donate link: NA
 Tags: show hide administrator bar design logged in
 Requires at least: 4.2.2
 Created with Wordpress 4.2.2
@@ -16,13 +16,13 @@ License URI: http://opensource.org/licenses/MIT
 
 ## Description
 
-Am Pop is built with developers and designers in mind that need to see the design without the admin bar hovering on top of content. Plugin adds a button to handle visibility (show and hide) of Admin Bar and Edit-link when logged in. Am Pop requires jQuery to be installed (not included in Plugin).
+AmPop is built with developers and designers in mind that need to see the design without the admin bar hovering on top of content. Plugin adds a button to handle visibility (show and hide) of Admin Bar and Edit-link when logged in. AmPop requires jQuery to be installed (not included in Plugin).
 
 How does it work? The plugin uses jQuery slideToggle() to show and hide the admin bar. It also containes jQuery Cookie Plugin v1.4.1 by Klaus Hartl (https://github.com/carhartl/jquery-cookie) to remember current state while browsing thru the website. The low foot print design is built with CSS3.
 
 ## Main functionality
 
-Am Pop adds a box in the upper left corner of browser for site admins to toggle visibility of the Wordpress admin bar.
+AmPop adds a box in the upper left corner of browser for site admins to toggle visibility of the Wordpress admin bar.
 When toggled the plugin toggles to a low transparency box which fades in and out on hover
 While toggled users have a option to enter the dashboard by clicking an ’Edit’ link. Click takes user to domain.com/wp-admin.
 
@@ -31,7 +31,7 @@ While toggled users have a option to enter the dashboard by clicking an ’Edit�
 Upload plugin-name.php to the /wp-content/plugins/ directory
 Activate Kidkie Admin Menu Pop through the 'Plugins' menu in WordPress *
 
-The plugin works when activated
+The plugin get's to work when activated, no settings needed.
 
 ## Code comments
 
@@ -39,7 +39,7 @@ The plugin uses element ```#wpadminbar``` (Wordpress 4.4) to toggle Wordpress Ad
 
 ```var adminBarID = "#wpadminbar";```
 
-When activated Ampop looks thru the body for class-name ```.edit-link``` and hides all elements. To change this, edit line 15 in jquery.ampop.js to match your setup.
+When activated AmPop looks thru the body for class-name ```.edit-link``` and hides all elements. To change this, edit line 15 in jquery.ampop.js to match your setup.
 
 ```var editButtonClass = ".edit-link";```
 
@@ -54,18 +54,21 @@ Can be found in /assets/
 
 ## Changelog
 
-1.2
+#### 1.3
+Updated the readme with some MD flare.
+
+#### 1.2
 Uploaded to Wordpress.com Plugin Directory again.
 Changed plugin_dir_url( $file );
 Tested with Wordpress 4.4
 Fixed an issue where there was a box floating ontop of the browser stopping clicks on navbars etc.
 Removed link to Wordpress Admin in the Kidkie Admin Pop Meny "toggle tab".
 
-1.1
+#### 1.1
 Added easier access to Wordpress elements (settings) to jquery.ampop.js.
 Moved all files to /assets/ folder
 
-1.0
+#### 1.0
 Uploaded to Wordpress.com Plugin Directory - Fail
 JS and CSS moved into /assets/ directory
 
