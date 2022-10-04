@@ -4,15 +4,15 @@ Built for developers and designers with need to preview design without the Wordp
 
 ### Kidkie Admin Menu Pop (ampop)
 
-Contributors: Kidkie
-Donate link: NA
-Tags: show hide administrator bar design logged in
-Requires at least: 4.2.2
-Created with Wordpress 4.2.2
-Tested up to: Wordpress 5.9
-Stable tag: Wordpress 5.9
-License: Released under the MIT license
-License URI: http://opensource.org/licenses/MIT
+* Contributors: Kidkie
+* Donate link: NA
+* Tags: show hide administrator bar design logged in
+* Requires at least: 4.2.2
+* Created with Wordpress 4.2.2
+* Tested up to: Wordpress 5.9
+* Stable tag: Wordpress 5.9
+* License: Released under the MIT license
+* License URI: http://opensource.org/licenses/MIT
 
 ## Description
 
